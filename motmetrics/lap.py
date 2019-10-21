@@ -145,10 +145,17 @@ def lsa_solve_lapjv(costs):
     return indices[:,0], indices[:,1]
 
 def init_standard_solvers():
-    import importlib
-    from importlib import util
-    
     global available_solvers, default_solver, solver_map
+
+    import sys
+    import importlib
+    if sys.version_info[0] >= 3:
+        from importlib import util
+    else:
+        available_solvers = ['scipy']
+        default_solver = available_solvers[0]
+        solver_map = {'scipy': lsa_solve_scipy}
+        return
 
     solvers = [
         ('lapsolver', lsa_solve_lapsolver),
