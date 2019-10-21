@@ -2,6 +2,8 @@
 
 [![PyPI version](https://badge.fury.io/py/motmetrics.svg)](https://badge.fury.io/py/motmetrics) [![](https://travis-ci.org/cheind/py-motmetrics.svg?branch=master)](https://travis-ci.org/cheind/py-motmetrics)
 
+This fork works with Python2 as well and only support `scipy` at the moment for solver backend.
+
 ## py-motmetrics
 
 The **py-motmetrics** library provides a Python implementation of metrics for benchmarking multiple object trackers (MOT).
