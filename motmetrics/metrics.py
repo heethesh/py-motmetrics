@@ -287,7 +287,7 @@ def num_fragmentations(df, obj_frequencies):
 
 def motp(df, num_detections):
     """Multiple object tracker precision."""
-    return df.noraw['D'].sum() / num_detections
+    return (1 - (df.noraw['D'].sum() / num_detections)) * 100.0
 
 def mota(df, num_misses, num_switches, num_false_positives, num_objects):
     """Multiple object tracker accuracy."""
