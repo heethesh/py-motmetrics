@@ -397,7 +397,7 @@ def create():
     m.register(partially_tracked, formatter='{:d}'.format)
     m.register(mostly_lost, formatter='{:d}'.format)
     m.register(num_fragmentations)
-    m.register(motp, formatter='{:.3f}'.format)
+    m.register(motp, formatter='{:.1%}'.format)
     m.register(mota, formatter='{:.1%}'.format)
     m.register(precision, formatter='{:.1%}'.format)
     m.register(recall, formatter='{:.1%}'.format)
